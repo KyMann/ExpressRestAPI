@@ -1,8 +1,9 @@
 import express from 'express';
 import path from 'path';
-import logger from '../logger';
 
+import logger from './logger';
 
+const PORT = 7878;
 
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
@@ -19,9 +20,9 @@ app.get('/status', async (request, response) => {
     logger.debug('updated status');
 })
 
-app.listen(port, (err) => {
+app.listen(PORT, (err) => {
     if (err) {
         logger.debug('server error', err);
     }
-    logger.debug(`server is listening on ${port}`);
+    logger.debug(`server is listening on ${PORT}`);
 });
