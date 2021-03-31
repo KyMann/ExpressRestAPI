@@ -1,5 +1,5 @@
 {
-    "name": "ExpressRestAPI",
+    "name": "expressrestapi",
     "version": "0.0.1-beta",
     "description": "an example REST API",
     "main": "src/index.js",
